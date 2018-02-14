@@ -10,7 +10,9 @@
 
 	<body>
 		<div id="header">
-			<h1>Gunn Public Advocacy and Speech</h1>
+			<div>
+				<h1>Gunn Public Advocacy and Speech</h1>
+			</div>
 		</div>
 		<div id="article">
 			<div class="section">
@@ -133,5 +135,16 @@
 				</div>
 			</div>
 		</div>
+		
+		<script>
+			window.onscroll = function() {
+				var titles = document.getElementsByClassName("title");
+				for (var i = 0; i < titles.length; i++) {
+					if (window.screenY - titles[i].getBoundingClientRect().top > 0) {
+						document.getElementById("header").children[0].children[0].innerHTML = titles[i].innerHTML;
+					}
+				}
+			}
+		</script>
 	</body>
 </html>
