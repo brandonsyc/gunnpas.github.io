@@ -87,3 +87,23 @@ a {
 	max-width: 960px;
 	padding-left: 40px;
 }
+.half {
+	background-color: #000;
+	height: 50%;
+}
+.none {
+	visibility: none;
+	position: fixed;
+}
+@media only screen and (max-width: 768px) {
+	.row {
+		display: initial;
+	}
+	.row .third {
+		margin: 10px 0;
+		width: 100%;
+	}
+	.block {
+		width: 100%;
+	}
+}

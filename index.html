@@ -9,10 +9,14 @@
 	</head>
 
 	<body>
+		<h1 class="title none">Gunn Public Advocacy and Speech</h1>
 		<div id="header">
 			<div>
-				<h1>Gunn Public Advocacy and Speech</h1>
+				<h1></h1>
 			</div>
+		</div>
+		<div class="half">
+
 		</div>
 		<div id="article">
 			<div class="section">
@@ -47,7 +51,7 @@
 							<li>Compete in tournaments</li>
 							<li>Length: 40 &ndash; 60 minutes</li>
 							<li>Adversarial</li>
-							<li>Partnet (except LD)</li>
+							<li>Partner (except LD)</li>
 						</ul>
 					</div>
 				</div>
@@ -73,7 +77,7 @@
 				</div>
 			</div>
 			<div class="section">
-				<h1 class="title">PA Forums and Competitions</h1>
+				<h1 class="title">Public Advocacy Forums</h1>
 				<div class="row">
 					<div class="third">
 						<h2>Non-Profits</h2>
@@ -138,13 +142,19 @@
 		
 		<script>
 			window.onscroll = function() {
+				scroll();
+			}
+			
+			function scroll() {
 				var titles = document.getElementsByClassName("title");
 				for (var i = 0; i < titles.length; i++) {
-					if (window.screenY - titles[i].getBoundingClientRect().top > 0) {
+					if (window.screenY - titles[i].getBoundingClientRect().top + titles[i].clientHeight > 10) {
 						document.getElementById("header").children[0].children[0].innerHTML = titles[i].innerHTML;
 					}
 				}
 			}
+			
+			scroll();
 		</script>
 	</body>
 </html>
