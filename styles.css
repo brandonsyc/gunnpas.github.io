@@ -49,6 +49,11 @@ html {
 	margin: 10px;
 	padding: 20px;
 }
+.whole {
+	flex-basis: calc(100% - 60px);
+	margin: 10px;
+	padding: 20px;
+}
 h1 {
 	margin-bottom: 30px;
 }
@@ -77,4 +82,8 @@ strong {
 a {
 	color: #08c;
     text-decoration: none;
+}
+.color {
+	background-color: #08c;
+	color: #fff;
 }
