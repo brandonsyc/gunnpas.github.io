@@ -2,108 +2,79 @@
 	width: 10px;
 }
 *::-webkit-scrollbar-thumb {
-	background-color: #c34;
+	background-color: #6ac;
 }
 *::-webkit-scrollbar-track {
 	background-color: #ccc;	
 }
 * {
-	font-family: "Trebuchet MS", Tahoma, sans-serif;
+	font-family: "Quicksand";
 	font-weight: 100;
+	line-height: 30px;
 	margin: 0;
 }
 body,
 html {
+	background-color: #eff;
 	height: 100%;
 }
-#header {
-	background-color: #601;
-	color: #fff;
-	padding: 100px 0 10px 0;
-	position: fixed;
-	top: 0;
-	width: 100%;
-}
-#article {
+.article {
 	margin: auto;
-	max-width: 960px;
+	max-width: 748px;
+	padding: 10px;
 }
-.color .third {
-	background-color: #c34;
-	color: #fff;
-	text-align: center;
+.one {
+	background-color: #cef;
 }
 .row {
 	display: flex;
+	flex-wrap: wrap;
 }
-.row .third {
-	border-radius: 5px;
-	box-shadow: inset 0 0 1px #000;
+.two {
+	flex-basis: calc(200% / 3 - 60px);
+	padding: 20px;
+}
+.one {
+	flex-basis: calc(100% / 3 - 60px);
+	padding: 20px;
+}
+.empty {
+	background-color: #eff;
+}
+.third {
+	margin: 10px;
+}
+.half {
+	flex-basis: calc(50% - 60px);
 	margin: 10px;
 	padding: 20px;
-	width: calc(100% / 3);
 }
-.row .third:first-child {
-	margin-left: 0;
-}
-.row .third:last-child {
-	margin-right: 0;
-}
-.row .disabled {
-	color: #666;
-	background-color: #eee;
-}
-h2 {
-	margin: 20px 0;
-}
-p,
-li {
-	line-height: 30px;
-}
-br {
-	line-height: 50px;
-}
-.block {
-	margin: auto;
-	padding: 10px;
-	width: 50%;
+h1 {
+	margin-bottom: 30px;
 }
 strong {
 	font-weight: 900;
 }
-a {
-	color: #09c;
-	text-decoration: none;
+.shrink {
+	align-self: flex-end;
 }
-.title {
-	background-color: #000;
-	border-radius: 5px;
+.fa {
+	background-color: #3b5998;
+    border-radius: 50%;
 	color: #fff;
-	margin-top: 50px;
-	padding: 20px;
+	height: 50px;
+	margin-right: 10px;
+	position: relative;
+	vertical-align: middle;
+	width: 50px;
 }
-#header div {
-	margin: auto;
-	max-width: 960px;
-	padding-left: 40px;
+.fa::before {
+	left: 50%;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
 }
-.half {
-	background-color: #000;
-	height: 50%;
-}
-.none {
-	visibility: none;
-	position: fixed;
-}
-@media only screen and (max-width: 768px) {
-	.row {
-		display: initial;
-	}
-	.row .third {
-		margin: 10px 0;
-		width: 100%;
-	}
-	.block {
-		width: 100%;
-	}
+a {
+	color: #08c;
+    text-decoration: none;
 }
