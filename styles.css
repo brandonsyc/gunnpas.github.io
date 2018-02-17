@@ -18,17 +18,15 @@ html {
 	background-color: #eff;
 	height: 100%;
 }
-.article {
-	margin: auto;
-	max-width: 748px;
-	padding: 10px;
-}
 .one {
 	background-color: #cef;
 }
 .row {
 	display: flex;
 	flex-wrap: wrap;
+	margin: auto;
+	max-width: 748px;
+	padding: 10px;
 }
 .two {
 	flex-basis: calc(200% / 3 - 60px);
@@ -86,4 +84,26 @@ a {
 .color {
 	background-color: #08c;
 	color: #fff;
+}
+.big {
+	align-items: center;
+	background-color: #000;
+	color: #fff;
+	display: flex;
+	height: 100%;
+	justify-content: center;
+	overflow: hidden;
+}
+#parallax {
+	max-width: 748px;
+	padding: 10px;
+}
+h1,
+h2 {
+	line-height: 40px;
+}
+#bottom {
+	bottom: 20px;
+	color: #ccc;
+	position: absolute;
 }
