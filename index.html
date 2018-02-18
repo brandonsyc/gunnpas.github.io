@@ -100,7 +100,7 @@
 		</div>
 		
 		<script>
-			window.onscroll = function() {
+			function update() {
 				document.getElementById("bottom").style.opacity = 1 - window.scrollY / (window.innerHeight / 2);
 				document.getElementById("parallax").style.transform = "translate(0, " + (window.scrollY * 100 / window.innerHeight) + "%)";
 				document.getElementById("parallax").style.opacity = 1 - window.scrollY / window.innerHeight;
@@ -115,6 +115,10 @@
 				if (window.innerHeight > document.getElementById("still").getBoundingClientRect().bottom) {
 					document.getElementById("move").style.visibility = "hidden";
 				}
+			}
+			
+			window.onscroll = function() {
+				update();
 			}
 		</script>
 	</body>
