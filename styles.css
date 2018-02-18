@@ -107,3 +107,43 @@ h2 {
 	color: #ccc;
 	position: absolute;
 }
+#move {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	left: 0;
+}
+.footer {
+	background-color: #379;
+	padding: 10px;
+}
+.hide {
+	background-color: #dee !important;
+}
+.sticky {
+	background-color: #046;
+	z-index: 1;
+}
+.sticky div {
+	display: flex;
+	margin: auto;
+	max-width: 748px;
+	padding: 10px;
+}
+.sticky a {
+	flex-grow: 1;
+	text-align: center;
+}
+.sticky a {
+	color: #fff;
+}
+.hide a {
+	visibility: hidden;
+}
+.footer div {
+	color: #ccc;
+	margin: auto;
+	max-width: 748px;
+	padding: 10px;
+	text-align: center;
+}

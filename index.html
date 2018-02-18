@@ -18,9 +18,25 @@
 			</div>
 			<p id="bottom">Scroll down for more</p>
 		</div>
+		<div class="sticky" id="move">
+			<div>
+				<a>About</a>
+				<a>Public Advocacy</a>
+				<a>Speech</a>
+				<a>Contact</a>
+			</div>
+		</div>
+		<div class="sticky" id="stay">
+			<div>
+				<a>About</a>
+				<a>Public Advocacy</a>
+				<a>Speech</a>
+				<a>Contact</a>
+			</div>
+		</div>
 		<div class="row">
 			<div class="whole">
-				<h1>What are Public Advocacy and Speech?</h1>
+				<h1>About Public Advocacy and Speech</h1>
 				<p>In Public Advocacy and Speech, students present and speak on issues or causes in which they believe. The goal is to persuade and inform others.</p>
 			</div>
 			<div class="one third color">
@@ -69,12 +85,36 @@
 				<p><strong>Presidents</strong>:<br>Brandon Chung &amp; Nandita Gupta<br><strong>Vice President</strong>: Skyler Hedblom<br><strong>Secretary</strong>: Sophie Alexis<br><strong>Treasurer</strong>: Eileen Hung<br><br><strong>Faculty Advisor</strong>: Daljeet Gill</p>
 			</div>
 		</div>
+		<div class="sticky" id="still">
+			<div>
+				<a>About</a>
+				<a>Public Advocacy</a>
+				<a>Speech</a>
+				<a>Contact</a>
+			</div>
+		</div>
+		<div class="footer">
+			<div>
+				<p>&copy; 2018 Gunn Public Advocacy and Speech<br>Thursday lunch in the Gunn library</p>
+			</div>
+		</div>
 		
 		<script>
 			window.onscroll = function() {
 				document.getElementById("bottom").style.opacity = 1 - window.scrollY / (window.innerHeight / 2);
 				document.getElementById("parallax").style.transform = "translate(0, " + (window.scrollY * 100 / window.innerHeight) + "%)";
 				document.getElementById("parallax").style.opacity = 1 - window.scrollY / window.innerHeight;
+				
+				if (window.scrollY / document.getElementById("stay").clientHeight > 1) {
+					document.getElementById("move").style.visibility = "visible";
+					document.getElementById("stay").className = "sticky hide";
+				} else {
+					document.getElementById("move").style.visibility = "hidden";
+					document.getElementById("stay").className = "sticky";
+				}
+				if (window.innerHeight > document.getElementById("still").getBoundingClientRect().bottom) {
+					document.getElementById("move").style.visibility = "hidden";
+				}
 			}
 		</script>
 	</body>
