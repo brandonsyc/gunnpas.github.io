@@ -20,22 +20,22 @@
 		</div>
 		<div class="sticky" id="move">
 			<div>
-				<a>About</a>
-				<a>Public Advocacy</a>
-				<a>Speech</a>
-				<a>Contact</a>
+				<a onClick="pan(0)">About</a>
+				<a onClick="pan(1)">Public Advocacy</a>
+				<a onClick="pan(2)">Speech</a>
+				<a onClick="pan(3)">Contact</a>
 			</div>
 		</div>
 		<div class="sticky" id="stay">
 			<div>
-				<a>About</a>
-				<a>Public Advocacy</a>
-				<a>Speech</a>
-				<a>Contact</a>
+				<a onClick="pan(0)">About</a>
+				<a onClick="pan(1)">Public Advocacy</a>
+				<a onClick="pan(2)">Speech</a>
+				<a onClick="pan(3)">Contact</a>
 			</div>
 		</div>
 		<div class="row">
-			<div class="whole">
+			<div class="whole" id="0">
 				<h1>About Public Advocacy and Speech</h1>
 				<p>In Public Advocacy and Speech, students present and speak on issues or causes in which they believe. The goal is to persuade and inform others.</p>
 			</div>
@@ -49,7 +49,7 @@
 				<p><strong>Have fun</strong>. Share ideas. Practice together. Support each other’s interests.</p>
 			</div>
 			<hr>
-			<div class="two third">
+			<div class="two third" id="1">
 				<h1>Public Advocacy</h1>
 				<p>Students can participate in many different public forums and competitions that occur throughout the year. Students meet to share ideas and develop individual speeches.<br><br>Time commitment varies from presenting or competing in one event to working with local non-profits on a longer-term advocacy project.</p>
 			</div>
@@ -64,7 +64,7 @@
 				<p><strong>Competitions</strong><br><br>Compete in competitions based on an inspirational theme. Some offer scholarships.</p>
 			</div>
 			<hr>
-			<div class="two third">
+			<div class="two third" id="2">
 				<h1>Speech</h1>
 				<p>Students can choose to attend as many or as few as one tournament a year. Although students practice together and give feedback at weekly meetings, the development work is done individually.<br><br>Typically, students create and present <strong>one</strong> piece. Depending on event, the piece is either a published speech or something original the student writes. The <strong>same</strong> piece can be presented at all tournaments.</p>
 			</div>
@@ -79,7 +79,7 @@
 				<p><strong>Extemporaneous</strong><br><br>Every round, recieve a new topic and 30 minutes to prepare a 7 minute speech. Must be memorized and have three points.</p>
 			</div>
 			<hr>
-			<div class="half">
+			<div class="half" id="3">
 				<h1>Contact</h1>
 				<p><a href="https://www.facebook.com/gunn.speech.1" class="fa fa-facebook"></a><strong>Email</strong>: <a href="mailto:gunnhsspeech@gmail.com">gunnhsspeech@gmail.com</a></p>
 			</div>
@@ -103,10 +103,10 @@
 		</div>
 		<div class="sticky" id="still">
 			<div>
-				<a>About</a>
-				<a>Public Advocacy</a>
-				<a>Speech</a>
-				<a>Contact</a>
+				<a onClick="pan(0)">About</a>
+				<a onClick="pan(1)">Public Advocacy</a>
+				<a onClick="pan(2)">Speech</a>
+				<a onClick="pan(3)">Contact</a>
 			</div>
 		</div>
 		<div class="footer">
@@ -138,6 +138,22 @@
 			}
 			
 			update();
+			
+			var timeout, target;
+			
+			function pan(x) {
+				timeout = setTimeout("pan(-1)", 1);
+				if (x > -1) {
+					target = x;
+				}
+				var top = document.getElementById(target).getBoundingClientRect().top;
+				if (Math.abs(top) < 5) {
+					window.scrollTo(0, window.scrollY + top);
+					clearTimeout(timeout);
+				} else {
+					window.scrollTo(0, window.scrollY + Math.max(Math.abs(top / 50), 5) * Math.sign(top));
+				}
+			}
 		</script>
 	</body>
 </html>
