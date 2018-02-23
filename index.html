@@ -14,7 +14,7 @@
 		<div class="big">
 			<div id="parallax">
 				<img src="thing white.png" alt="Gunn Public Advocacy and Speech">
-				<p>Today, students must be able to <strong>articulate</strong> and <strong>present ideas effectively</strong> in a civil manner. We aim to <strong>advocate and inspire</strong> through <strong>persuasive speech</strong> in public forums and competitions.<br><br><strong>Join us</strong>! Weekly lunch meetings on Thursdays at the Gunn Library. Eating is allowed and <strong>free food</strong> is provided for all members.</p>
+				<p>Today, students must be able to <strong>articulate</strong> and <strong>present ideas effectively</strong> in a civil manner. We aim to <strong>advocate and inspire</strong> through <strong>persuasive speech</strong> in public forums and competitions.<br><br><strong>Join</strong> Gunn’s newly approved Public Advocacy and Speech Club on Thursdays! Weekly lunch meetings are held at the Gunn Library. Eating is allowed and <strong>free food</strong> is provided for all members.</p>
 			</div>
 			<p id="bottom">Scroll down for more</p>
 		</div>
@@ -37,7 +37,7 @@
 		<div class="row">
 			<div class="whole" id="0">
 				<h1>About Public Advocacy and Speech</h1>
-				<p>In Public Advocacy and Speech, students present and speak on issues or causes in which they believe. The goal is to persuade and inform others.</p>
+				<p>In Public Advocacy and Speech, students personally choose a topic or cause in which they believe to present and speak. The goal is to persuade and inform others. The goal is to persuade and inform others. The foundation of our teaching will be based on competitive speech formats.</p>
 			</div>
 			<div class="one third color">
 				<p><strong>Gain public speaking skills</strong>. Speak with confidence. Become more persuasive.</p>
@@ -47,6 +47,9 @@
 			</div>
 			<div class="one third color">
 				<p><strong>Have fun</strong>. Share ideas. Practice together. Support each other’s interests.</p>
+			</div>
+			<div class="whole">
+				<p>There is often confusion over speech versus debate. Both do require speaking skills. Speech, however, allows students to express their own views and opinions, supported by facts, evidence and personal experiences. In oratory and interpretation speech, students employ their creativity and incorporate elements of performance.<br><br>Speech is individually based (except duo) which means students can conveniently fit the work into their busy schedules, and the the duration of a speech is typically no more than 10 minutes long compared to a 40 minute debate round.</p>
 			</div>
 			<hr>
 			<div class="two third" id="1">
@@ -66,10 +69,10 @@
 			<hr>
 			<div class="two third" id="2">
 				<h1>Speech</h1>
-				<p>Students can choose to attend as many or as few as one tournament a year. Although students practice together and give feedback at weekly meetings, the development work is done individually.<br><br>Typically, students create and present <strong>one</strong> piece. Depending on event, the piece is either a published speech or something original the student writes. The <strong>same</strong> piece can be presented at all tournaments.</p>
+				<p>Students can choose to attend as many or as few as one tournament a year. Although students practice together and give feedback at weekly meetings, the development work is done individually.<br><br>Typically, students create and present <strong>one</strong> piece. Depending on the event, the piece is either a published speech or something original that the student writes. The <strong>same</strong> piece can be presented at all tournaments.</p>
 			</div>
 			<div class="one third shrink">
-				<p><strong>Original</strong><br><br>Write a 10 minute three-point original speech of any topic. Can be persuasive or advocative.</p>
+				<p><strong>Original</strong><br><br>Write a 10 minute three-point original speech on any topic. Can be persuasive or advocative.</p>
 			</div>
 			<div class="empty one third"></div>
 			<div class="one third">
@@ -81,7 +84,7 @@
 			<hr>
 			<div class="half" id="3">
 				<h1>Contact</h1>
-				<p><a href="https://www.facebook.com/gunn.speech.1" class="fa fa-facebook"></a><strong>Email</strong>: <a href="mailto:gunnhsspeech@gmail.com">gunnhsspeech@gmail.com</a></p>
+				<p><strong>Updates and Events</strong>: <a href="https://www.facebook.com/gunn.speech.1" class="fa fa-facebook"></a><br><strong>Email</strong>: <a href="mailto:gunnhsspeech@gmail.com">gunnhsspeech@gmail.com</a></p>
 			</div>
 			<div class="half">
 				<h1>Officers</h1>
@@ -121,7 +124,7 @@
 				document.getElementById("parallax").style.transform = "translate(0, " + (window.scrollY * 100 / window.innerHeight) + "%)";
 				document.getElementById("parallax").style.opacity = 1 - window.scrollY / window.innerHeight;
 				
-				if (window.scrollY / document.getElementById("stay").clientHeight > 1) {
+				if (window.innerHeight > document.getElementById("stay").getBoundingClientRect().bottom) {
 					document.getElementById("move").style.visibility = "visible";
 					document.getElementById("stay").className = "sticky hide";
 				} else {
